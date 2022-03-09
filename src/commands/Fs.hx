@@ -1,5 +1,10 @@
 package commands;
 
+import Main.Reference;
+import sys.io.File;
+import sys.FileSystem;
+import haxe.io.Path;
+
 class Fs {
 	public var name:String;
 
