@@ -1,0 +1,4 @@
+--class-path src
+--cpp bin/cpp
+--main Main
+--library console.hx
