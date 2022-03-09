@@ -33,23 +33,8 @@ class Main {
 				var x = Quit.trigger();
 				Sys.println("Task completed with code " + x);
 			} else if (command == "help") {
-				Console.log("<red>######                            #######                                             </red>");
-				Console.log("<red>#     #   ##    ####  #  ####        #    ###### #####  #    # # #    #   ##   #      </red>");
-				Console.log("<red>#     #  #  #  #      # #    #       #    #      #    # ##  ## # ##   #  #  #  #      </red>");
-				Console.log("<red>######  #    #  ####  # #            #    #####  #    # # ## # # # #  # #    # #      </red>");
-				Console.log("<red>#     # ######      # # #            #    #      #####  #    # # #  # # ###### #      </red>");
-				Console.log("<red>#     # #    # #    # # #    #       #    #      #   #  #    # # #   ## #    # #      </red>");
-				Console.log("<red>######  #    #  ####  #  ####        #    ###### #    # #    # # #    # #    # ###### </red>");
-				Sys.println(" ");
-				Console.log('<blue>BasicTerminal v${Reference.VERSION}</blue>');
-				Sys.println(" ");
-				Sys.println("Command | Arguments | Description");
-				Sys.println(" ");
-				Sys.println("CLR     | None      | Clears the console");
-				Sys.println("FS      | None      | Opens the filesystem menu");
-				Sys.println("HELP    | None      | The command you just used");
-				Sys.println("QUIT    | None      | Quits the terminal");
-				Sys.println("VERSION | None      | Prints the current version of Basic Terminal");
+				var x = Help.trigger();
+				Sys.println("Task completed with code " + x);
 			} else if (command == "version") {
 				Console.log('<white>BasicTerminal v${Reference.VERSION}</white>');
 			} else if (command == "cd") {
