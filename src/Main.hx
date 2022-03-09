@@ -1,4 +1,5 @@
-import haxe.display.Protocol.Version;
+package;
+
 import sys.FileSystem;
 import sys.io.File;
 import haxe.io.Path;
