@@ -1,3 +1,4 @@
+import haxe.display.Protocol.Version;
 import sys.FileSystem;
 import sys.io.File;
 import haxe.io.Path;
@@ -36,7 +37,8 @@ class Main {
 				var x = Help.trigger();
 				Sys.println("\n> Task completed with code " + x);
 			} else if (command == "version") {
-				Console.log('<white>BasicTerminal v${Reference.VERSION}</white>');
+				var x = Version.trigger();
+				Sys.println("\n> Task completed with code " + x);
 			} else if (command == "cd") {
 				if (args[1]) {
 					if (!args[1].contains(":")) {
