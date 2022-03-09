@@ -1,6 +1,6 @@
 package commands;
 
-class Quit implements Command {
+class Quit {
 	public var name:String;
 
 	public var desc:String;
