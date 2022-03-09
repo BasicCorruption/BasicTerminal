@@ -31,10 +31,10 @@ class Main {
 
 			if (command == "quit") {
 				var x = Quit.trigger();
-				Sys.println("Task completed with code " + x);
+				Sys.println("\n> Task completed with code " + x);
 			} else if (command == "help") {
 				var x = Help.trigger();
-				Sys.println("Task completed with code " + x);
+				Sys.println("\n> Task completed with code " + x);
 			} else if (command == "version") {
 				Console.log('<white>BasicTerminal v${Reference.VERSION}</white>');
 			} else if (command == "cd") {
