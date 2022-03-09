@@ -30,7 +30,8 @@ class Main {
 			var command = latestInput.split(" ")[0];
 
 			if (command == "quit") {
-				Quit.trigger();
+				var x = Quit.trigger();
+				Sys.println("Task completed with code " + x);
 			} else if (command == "help") {
 				Console.log("<red>######                            #######                                             </red>");
 				Console.log("<red>#     #   ##    ####  #  ####        #    ###### #####  #    # # #    #   ##   #      </red>");
