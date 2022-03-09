@@ -5,8 +5,8 @@ class Quit implements Command {
 
 	public var desc:String;
 
-	public static function trigger():Dynamic {
+	public static function trigger():Int {
 		Sys.exit(0);
-		throw new haxe.exceptions.NotImplementedException();
+		return 0;
 	}
 }
