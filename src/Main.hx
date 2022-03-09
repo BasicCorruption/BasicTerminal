@@ -41,27 +41,14 @@ class Main {
 				var x = Version.trigger();
 				Sys.println("\n> Task completed with code " + x);
 			} else if (command == "cd") {
-				if (args[1]) {
-					if (!args[1].contains(":")) {
-						// to be worked on
-					} else {
-						Reference.DIR = args[1];
-					}
-				} else {
-					Console.log(Reference.DIR);
-				}
+				var x = Cd.trigger(args);
+				Sys.println("\n> Task completed with code " + x);
 			} else if (command == "fs") {
-				if (args[1] == "makedir") {
-					var dpath = Path.join([Reference.DIR, args[2]]);
-					FileSystem.createDirectory(dpath);
-					Sys.println("Created directory at " + dpath);
-				} else {
-					Sys.println("Command | Arguments | Description");
-					Sys.println(" ");
-					Sys.println("makedir | dpath      | Creates a directory at $dpath");
-				}
+				var x = Fs.trigger(args);
+				Sys.println("\n> Task completed with code " + x);
 			} else if (command == "clr") {
-				Sys.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+				var x = Clr.trigger();
+				Sys.println("\n> Task completed with code " + x);
 			} else {
 				Console.log("<red>Error: Unrecognised command</red>");
 			}
@@ -73,7 +60,7 @@ class Main {
 }
 
 class Reference {
-	public static final VERSION = "0.0.1-dev+1";
+	public static final VERSION = "0.0.2-dev.1";
 
-	public static var DIR = "C:";
+	public static var DIR = "/home/";
 }
