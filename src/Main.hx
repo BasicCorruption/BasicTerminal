@@ -1,66 +1,36 @@
 package;
 
-import sys.FileSystem;
-import sys.io.File;
-import haxe.io.Path;
-import commands.*;
-
-using StringTools;
+import commands.Help;
+import commands.Quit;
 
 class Main {
 	static var latestInput:String;
 	static var oldInput:String;
 
-	static var args:Dynamic;
+	public static var sysargs:Array<String>;
 
-	static function main() {
-		Console.log("<red>######                            #######                                             </red>");
-		Console.log("<red>#     #   ##    ####  #  ####        #    ###### #####  #    # # #    #   ##   #      </red>");
-		Console.log("<red>#     #  #  #  #      # #    #       #    #      #    # ##  ## # ##   #  #  #  #      </red>");
-		Console.log("<red>######  #    #  ####  # #            #    #####  #    # # ## # # # #  # #    # #      </red>");
-		Console.log("<red>#     # ######      # # #            #    #      #####  #    # # #  # # ###### #      </red>");
-		Console.log("<red>#     # #    # #    # # #    #       #    #      #   #  #    # # #   ## #    # #      </red>");
-		Console.log("<red>######  #    #  ####  #  ####        #    ###### #    # #    # # #    # #    # ###### </red>");
-		Sys.println(" ");
-		Sys.println(" ");
-		Console.log('<blue>Welcome to BasicTerminal v${Reference.VERSION}! Type "help" to view a list of commands.</blue>');
-		Sys.println(" ");
+	public static function main():Void {
+		sysargs = Sys.args();
+
+		Sys.println("BasicTerminal v0.1");
+		Sys.println("Copyright (c) 2021, 2022, by SidGames5 (formerly known as BasicCorruption)\n");
+
 		while (true) {
+			Sys.print('${Sys.environment()["USERNAME"]}@${Sys.environment()["COMPUTERNAME"]}: ');
 			latestInput = Sys.stdin().readLine().toLowerCase();
-
-			args = latestInput.split(" ");
 			var command = latestInput.split(" ")[0];
+			var args = latestInput.split(" ").slice(1);
 
-			if (command == "quit") {
-				var x = Quit.trigger();
-				Sys.println("\n> Task completed with code " + x);
-			} else if (command == "help") {
-				var x = Help.trigger();
-				Sys.println("\n> Task completed with code " + x);
-			} else if (command == "version") {
-				var x = Version.trigger();
-				Sys.println("\n> Task completed with code " + x);
-			} else if (command == "cd") {
-				var x = Cd.trigger(args);
-				Sys.println("\n> Task completed with code " + x);
-			} else if (command == "fs") {
-				var x = Fs.trigger(args);
-				Sys.println("\n> Task completed with code " + x);
-			} else if (command == "clr") {
-				var x = Clr.trigger();
-				Sys.println("\n> Task completed with code " + x);
-			} else {
-				Console.log("<red>Error: Unrecognised command</red>");
+			switch (command) {
+				case "quit":
+					Quit.execute(args);
+				case "help":
+					Help.execute(args);
 			}
 
 			oldInput = latestInput;
 		}
+
 		return;
 	}
-}
-
-class Reference {
-	public static final VERSION = "0.0.2-dev.1";
-
-	public static var DIR = "/home/";
 }
