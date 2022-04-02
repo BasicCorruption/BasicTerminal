@@ -1,5 +1,6 @@
 package;
 
+import commands.Neofetch;
 import commands.Help;
 import commands.Quit;
 
@@ -26,6 +27,10 @@ class Main {
 					Quit.execute(args);
 				case "help":
 					Help.execute(args);
+				case "neofetch":
+					Neofetch.execute(args);
+				default:
+					Console.error("Unknown command: " + command);
 			}
 
 			oldInput = latestInput;
