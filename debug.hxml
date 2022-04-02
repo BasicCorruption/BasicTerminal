@@ -1,4 +1,11 @@
 --class-path src
 --main Main
 --library console.hx
---cpp bin/cpp
+--cpp bin/bterm
+
+--next
+
+--class-path modules/nsh
+--main Main
+--library console.hx
+--cpp bin/nsh

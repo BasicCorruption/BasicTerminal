@@ -1,5 +1,6 @@
 package;
 
+import commands.Shutdown;
 import commands.Neofetch;
 import commands.Help;
 import commands.Quit;
@@ -29,11 +30,14 @@ class Main {
 					Help.execute(args);
 				case "neofetch":
 					Neofetch.execute(args);
+				case "shutdown":
+					Shutdown.execute(args);
+				case "print":
+					Sys.println(args.join(" "));
 				default:
-					Console.error("Unknown command: " + command);
+					Console.log("<#00ff00>Starting integrated terminal...</>\n");
+					Sys.command(latestInput);
 			}
-
-			oldInput = latestInput;
 		}
 
 		return;
