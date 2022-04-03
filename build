@@ -1,0 +1,7 @@
+#!/bin/sh
+
+haxe ./debug.hxml
+mkdir ./export/
+copy ./bin/bterm/Main ./export/BasicTerminal.AppImage
+copy ./bin/fileexec/Main ./export/FileExec.AppImage
+copy ./bin/nsh/Main ./export/Nsh.AppImage

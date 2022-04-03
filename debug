@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd ./export/
+chmod +x ./BasicTerminal.AppImage
+chmod +x ./FileExec.AppImage
+chmod +x ./Nsh.AppImage
+./BasicTerminal.AppImage
+cd ./../
