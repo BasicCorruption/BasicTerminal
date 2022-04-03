@@ -1,6 +1,7 @@
 --class-path src
 --main Main
 --library console.hx
+--library version
 --cpp bin/bterm
 
 --next
