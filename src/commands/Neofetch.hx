@@ -5,7 +5,7 @@ class Neofetch {
 		Console.log("<#ffaa00>                                        </>");
 		Console.log("<#ffaa00>                                        </>");
 		Console.log("<#ffaa00>     %%%%%%%%*             (%%%%%%%(    </>   <#ff0000>Haxe: " + StaticExtender.getHaxeCompilerVersion() + "</>");
-		Console.log("<#ffaa00>     &%%%%%%%%%%%%.   %%%((((((((((/    </>   <#ff9900>OS: " + Sys.environment()["OS"] + "</>");
+		Console.log("<#ffaa00>     &%%%%%%%%%%%%.   %%%((((((((((/    </>   <#ff9900>OS: " + Sys.systemName() + "</>");
 		Console.log("<#ffaa00>     &&%%%%%%%%%%%%###((((((((((((//    </>   <#ffff00>User: " + Sys.environment()["USERNAME"] + "</>");
 		Console.log("<#ffaa00>     &&%%%%%%%%%########((((((((((//    </>   <#00ff00>System: " + Sys.environment()["COMPUTERNAME"] + "</>");
 		Console.log("<#ffaa00>      &&%%%%%%#############((((((/      </>   <#00ffff>Architecture: " + Sys.environment()["PROCESSOR_ARCHITECTURE"] + "</>");
