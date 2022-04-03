@@ -10,3 +10,9 @@
 --main Main
 --library console.hx
 --cpp bin/nsh
+
+--next
+
+--class-path modules/fileexec
+--main Main
+--cpp bin/fileexec

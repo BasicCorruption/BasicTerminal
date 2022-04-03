@@ -23,6 +23,15 @@ class Main {
 			var command = latestInput.split(" ")[0];
 			var args = latestInput.split(" ").slice(1);
 
+			if (sysargs.length != 0) {
+				if (sysargs[0] == "-command") {
+					command = sysargs[1];
+					args = sysargs.slice(2);
+				} else {
+					Sys.command("FileExec " + sysargs[1]);
+				}
+			}
+
 			switch (command) {
 				case "quit":
 					Quit.execute(args);
