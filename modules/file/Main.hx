@@ -14,6 +14,10 @@ class Main {
         
           File.saveContent(fn, args.slice(2).join(" "));
         }
+      case "-erase":
+        if (args[1] != null) {
+          File.saveContent(args[1], "");
+        }
     }
   }
 }
