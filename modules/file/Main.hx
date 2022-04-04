@@ -11,6 +11,8 @@ class Main {
       case "-make":
         if (args[1] != null) {
           var fn = args[1];
+        
+          File.saveContent(fn, args.slice(2).join(" "));
         }
     }
   }
