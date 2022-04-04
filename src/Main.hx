@@ -43,6 +43,8 @@ class Main {
 					Shutdown.execute(args);
 				case "print":
 					Sys.println(args.join(" "));
+				case "file":
+					Sys.command(command, args);
 				default:
 					Console.log("<#00ff00>Starting integrated terminal...</>\n");
 					Sys.command(latestInput);
