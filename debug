@@ -1,5 +1,8 @@
 #!/bin/sh
 
+chmod +x ./build
+./build
+
 cd ./export/
 chmod +x ./BasicTerminal.AppImage
 chmod +x ./FileExec.AppImage
